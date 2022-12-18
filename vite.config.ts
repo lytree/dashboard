@@ -23,7 +23,7 @@ export default defineConfig(config => {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `@use "./src/styles/global.scss" as *;`
+          additionalData: `@use "./src/styles/global.css" as *;`
         }
       }
     },
