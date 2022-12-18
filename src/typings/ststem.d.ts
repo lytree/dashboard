@@ -32,3 +32,21 @@ declare namespace Theme {
         showIcon: boolean;
     }
 }
+/** 菜单项配置 */
+type GlobalMenuOption = {
+    key: string;
+    label: string;
+    routeName: string;
+    routePath: string;
+    icon?: () => import('vue').VNodeChild;
+    children?: GlobalMenuOption[];
+};
+/** 面包屑 */
+type GlobalBreadcrumb = import('element-plus').DropdownOption & {
+    key: string;
+    label: string;
+    disabled: boolean;
+    routeName: string;
+    hasChildren: boolean;
+    children?: GlobalBreadcrumb[];
+};

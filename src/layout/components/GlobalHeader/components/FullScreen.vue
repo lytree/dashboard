@@ -1,5 +1,5 @@
 <template>
-  <hover-container class="w-40px h-full" tooltip-content="全屏" :inverted="theme.header.inverted" @click="toggle">
+  <hover-container class="w-40px h-full" tooltip-content="全屏" @click="toggle">
     <icon-gridicons-fullscreen-exit v-if="isFullscreen" class="text-18px" />
     <icon-gridicons-fullscreen v-else class="text-18px" />
   </hover-container>
@@ -7,9 +7,10 @@
 
 <script lang="ts" setup>
 import { useFullscreen } from '@vueuse/core';
-import { useThemeStore } from '@/store';
-
+import IconGridiconsFullscreenExit from '~icons/gridicons/fullscreen-exit'
+import IconGridiconsFullscreen from '~icons/gridicons/fullscreen'
 const { isFullscreen, toggle } = useFullscreen();
-const theme = useThemeStore();
 </script>
-<style scoped></style>
+<style scoped>
+
+</style>

@@ -4,6 +4,7 @@ const SvgIcon = () => import('./SvgIcon/index.vue');
 const IconClose = () => import('./ChromeTab/index.vue');
 const ChromeTab = () => import('./ChromeTab/index.vue');
 const DarkModeContainer = () => import('./DarkModeContainer/index.vue');
+const HoverContainer = () => import('./HoverContainer/index.vue');
 
 
-export { AppLoading, SystemLogo, SvgIcon, IconClose, ChromeTab, DarkModeContainer };
+export { AppLoading, SystemLogo, SvgIcon, IconClose, ChromeTab, DarkModeContainer, HoverContainer };
