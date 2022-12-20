@@ -78,8 +78,8 @@ export function useRouterPush(inSetup = true) {
         routerPush,
         routerBack,
         toHome,
-        toLogin,
-        toLoginModule,
+        // toLogin,
+        // toLoginModule,
         toLoginRedirect
     };
 }
