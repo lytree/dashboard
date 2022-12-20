@@ -1,6 +1,6 @@
 import { useRouter } from 'vue-router';
 import type { RouteLocationRaw } from 'vue-router';
-import { router as globalRouter, routeName } from '@/router';
+import { router as globalRouter } from '@/router';
 
 /**
  * 路由跳转
@@ -34,7 +34,7 @@ export function useRouterPush(inSetup = true) {
      * @param newTab - 在新的浏览器标签打开
      */
     function toHome(newTab = false) {
-        routerPush({ name: routeName('root') }, newTab);
+        routerPush({ name:'root' }, newTab);
     }
 
     // /**
