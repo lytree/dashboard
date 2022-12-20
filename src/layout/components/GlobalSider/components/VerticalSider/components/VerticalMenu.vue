@@ -1,32 +1,20 @@
 <template>
-  <n-scrollbar class="flex-1-hidden">
-    <n-menu
-      :value="activeKey"
-      :collapsed="app.siderCollapse"
-      :collapsed-width="theme.sider.collapsedWidth"
-      :collapsed-icon-size="22"
-      :options="routeStore.menus"
-      :expanded-keys="expandedKeys"
-      :indent="18"
-      :inverted="theme.sider.inverted"
-      @update:value="handleUpdateMenu"
-      @update:expanded-keys="handleUpdateExpandedKeys"
-    />
-  </n-scrollbar>
+  <el-scrollbar class="flex-1-hidden">
+    <el-menu :value="activeKey" :collapsed="app.siderCollapse" :collapsed-width="theme.sider.collapsedWidth"
+      :collapsed-icon-size="22" :options="routeStore.menus" :expanded-keys="expandedKeys" :indent="18"
+      :inverted="theme.sider.inverted" @update:value="handleUpdateMenu"
+      @update:expanded-keys="handleUpdateExpandedKeys" />
+  </el-scrollbar>
 </template>
 
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
-import type { MenuOption } from 'naive-ui';
-import { useAppStore, useThemeStore, useRouteStore } from '@/store';
+import { ElScrollbar, ElMenu } from 'element-plus';
 import { useRouterPush } from '@/composables';
 import { getActiveKeyPathsOfMenus } from '@/utils';
 
 const route = useRoute();
-const app = useAppStore();
-const theme = useThemeStore();
-const routeStore = useRouteStore();
 const { routerPush } = useRouterPush();
 
 const activeKey = computed(() => (route.meta?.activeMenu ? route.meta.activeMenu : route.name) as string);
@@ -49,4 +37,6 @@ watch(
   { immediate: true }
 );
 </script>
-<style scoped></style>
+<style scoped>
+
+</style>
