@@ -1,6 +1,5 @@
 <template>
   <dark-mode-container class="global-header flex-y-center h-full">
-    <global-logo :show-title="true" class="h-full w-128px" />
     <div class="flex-1-hidden flex-y-center h-full">
       <menu-collapse />
       <!-- <global-breadcrumb /> -->
@@ -9,6 +8,7 @@
       <!-- <global-search />
       <github-site />
       <full-screen />-->
+      <system-message />
       <theme-mode />
       <user-avatar />
     </div>
@@ -24,20 +24,10 @@ import {
   // GlobalBreadcrumb,
   // GithubSite,
   // FullScreen,
+  SystemMessage,
   ThemeMode,
   UserAvatar
 } from './components';
-
-interface Props {
-  // /** 显示logo */
-  // showLogo: GlobalHeaderProps['showLogo'];
-  // /** 显示头部菜单 */
-  // showHeaderMenu: GlobalHeaderProps['showHeaderMenu'];
-  // /** 显示菜单折叠按钮 */
-  // showMenuCollapse: GlobalHeaderProps['showMenuCollapse'];
-}
-
-defineProps<Props>();
 
 </script>
 <style scoped>

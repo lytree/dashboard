@@ -1,7 +1,7 @@
 <template>
   <el-dropdown :options="options" @select="handleDropdown">
     <hover-container class="px-12px">
-      <icon-custom-avatar class="text-32px" />
+      <icon-local-avatar class="text-32px" />
       <span class="pl-8px text-16px font-medium">username</span>
     </hover-container>
   </el-dropdown>
@@ -9,8 +9,9 @@
 
 <script lang="ts" setup>
 import { HoverContainer } from '@/components'
-import { ElMessageBox,ElDropdown } from 'element-plus'
+import { ElMessageBox, ElDropdown } from 'element-plus'
 import { useRouter } from 'vue-router';
+import IconLocalAvatar from "~icons/local/avatar"
 import { iconifyRender } from '@/utils';
 import type { Action } from 'element-plus'
 type DropdownKey = 'user-center' | 'logout';

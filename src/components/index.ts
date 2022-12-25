@@ -5,5 +5,6 @@ import ChromeTab from './ChromeTab/index.vue';
 import DarkModeContainer from './DarkModeContainer/index.vue';
 import HoverContainer from './HoverContainer/index.vue';
 import DarkModeSwitch from './DarkModeSwitch/index.vue'
+import LoadingEmptyWrapper from './LoadingEmptyWrapper/index.vue'
 
-export { AppLoading, SystemLogo, SvgIcon, ChromeTab, DarkModeContainer, HoverContainer, DarkModeSwitch };
+export { AppLoading, SystemLogo, SvgIcon, ChromeTab, DarkModeContainer, HoverContainer, DarkModeSwitch, LoadingEmptyWrapper };
