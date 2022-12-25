@@ -18,8 +18,8 @@
 <script setup lang="ts">
 import { ElDivider } from 'element-plus'
 import { useBoolean } from '@/hooks';
-import IconClose from './component/IconClose.vue';
-import SvgRadiusBg from './component/SvgRadiusBg.vue';
+import IconClose from './components/IconClose.vue';
+import SvgRadiusBg from './components/SvgRadiusBg.vue';
 
 interface Props {
     /** 激活状态 */

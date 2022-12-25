@@ -4,20 +4,19 @@ declare namespace Theme {
     interface Setting {
         /** 暗黑模式 */
         darkMode: boolean;
-        /** 是否自动跟随系统主题 */
-        followSystemTheme: boolean;
-        /** 固定头部和多页签 */
-        fixedHeaderAndTab: boolean;
-        /** 显示重载按钮 */
-        showReload: boolean;
-        /** 侧边栏样式 */
-        sider: Sider;
-        /** 菜单样式 */
-        menu: Menu;
-        /** 底部样式 */
-        footer: Footer;
-        /** 页面样式 */
-        page: Page;
+        // /** 是否自动跟随系统主题 */
+        // followSystemTheme: boolean;
+        // /** 侧边栏样式 */
+        // sider: Sider;
+    }
+    /** 全局头部属性 */
+    interface GlobalHeaderProps {
+        /** 显示logo */
+        showLogo: boolean;
+        /** 显示头部菜单 */
+        showHeaderMenu: boolean;
+        /** 显示菜单折叠按钮 */
+        showMenuCollapse: boolean;
     }
     /** 侧边栏样式 */
     interface Sider {
@@ -32,20 +31,22 @@ declare namespace Theme {
         /** vertical-mix模式下侧边栏的子菜单的宽度 */
         mixChildMenuWidth: number;
     }
-    /** 底部样式 */
-    interface Footer {
-        /** 是否固定底部 */
-        fixed: boolean;
-        /** 底部高度 */
-        height: number;
-    }
-    /** 全局头部属性 */
-    interface GlobalHeaderProps {
-        /** 显示logo */
-        showLogo: boolean;
-        /** 显示头部菜单 */
-        showHeaderMenu: boolean;
-        /** 显示菜单折叠按钮 */
-        showMenuCollapse: boolean;
-    }
 }
+/** 菜单项配置 */
+type GlobalMenuOption = {
+    key: string;
+    label: string;
+    routeName: string;
+    routePath: string;
+    icon?: () => import('vue').VNodeChild;
+    children?: GlobalMenuOption[];
+};
+/** 面包屑 */
+type GlobalBreadcrumb = import('element-plus').DropdownOption & {
+    key: string;
+    label: string;
+    disabled: boolean;
+    routeName: string;
+    hasChildren: boolean;
+    children?: GlobalBreadcrumb[];
+};

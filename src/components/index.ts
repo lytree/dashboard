@@ -1,10 +1,9 @@
-const AppLoading = () => import('./AppLoading/index.vue');
-const SystemLogo = () => import('./SystemLogo/index.vue');
-const SvgIcon = () => import('./SvgIcon/index.vue');
-const IconClose = () => import('./ChromeTab/index.vue');
-const ChromeTab = () => import('./ChromeTab/index.vue');
-const DarkModeContainer = () => import('./DarkModeContainer/index.vue');
-const HoverContainer = () => import('./HoverContainer/index.vue');
+import AppLoading from './AppLoading/index.vue';
+import SystemLogo from './SystemLogo/index.vue';
+import SvgIcon from './SvgIcon/index.vue';
+import ChromeTab from './ChromeTab/index.vue';
+import DarkModeContainer from './DarkModeContainer/index.vue';
+import HoverContainer from './HoverContainer/index.vue';
+import DarkModeSwitch from './DarkModeSwitch/index.vue'
 
-
-export { AppLoading, SystemLogo, SvgIcon, IconClose, ChromeTab, DarkModeContainer, HoverContainer };
+export { AppLoading, SystemLogo, SvgIcon, ChromeTab, DarkModeContainer, HoverContainer, DarkModeSwitch };
