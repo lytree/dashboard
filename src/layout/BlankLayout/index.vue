@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { GlobalContent } from '../components';
+import { GlobalContent } from '../commons';
 </script>
 <style scoped>
 

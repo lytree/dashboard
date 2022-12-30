@@ -1,6 +1,6 @@
 import type { App } from 'vue';
 import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router';
-import { BasicLayout } from '@/layout/index'
+import { BasicLayout, BlankLayout } from '@/layout/index'
 import type { RouterScrollBehavior } from 'vue-router';
 
 // import { useTabStore } from '@/store';
@@ -24,6 +24,43 @@ export const router = createRouter({
             order: 1
         }
     },
+    {
+        name: 'no-permission',
+        path: '/no-permission',
+        component: BlankLayout,
+        meta: {
+            title: '无权限',
+            singleLayout: 'blank'
+        }
+    },
+    {
+        name: 'not-found',
+        path: '/not-found',
+        component: BlankLayout,
+        meta: {
+            title: '未找到',
+            singleLayout: 'blank'
+        }
+    },
+    {
+        name: 'service-error',
+        path: '/service-error',
+        component: BlankLayout,
+        meta: {
+            title: '服务器错误',
+            singleLayout: 'blank'
+        }
+    },
+    // 匹配无效路径的路由
+    {
+        name: 'not-found-page',
+        path: '/:pathMatch(.*)*',
+        component: BasicLayout,
+        meta: {
+            title: '未找到',
+            singleLayout: 'base'
+        }
+    }
     ],
     // scrollBehavior
 });

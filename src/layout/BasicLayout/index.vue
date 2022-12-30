@@ -13,8 +13,7 @@
             <global-sider />
         </aside>
         <main class="grow w-full box-border duration-300 ease-in-out overflow-hidden pt-[112px]" :style="psSiderStyle">
-            <!-- <global-content /> -->
-            content
+            <global-content />
         </main>
         <footer
             class="z-[999] box-border w-full left-0 bottom-0 duration-300 ease-in-out flex-shrink-0 min-w-[1200px] h-[56px] pl-[0] fixed">
@@ -23,7 +22,7 @@
     </div>
 </template>
 <script setup lang="ts">
-import { GlobalFooter, GlobalHeader, GlobalSider } from '../commons';
+import { GlobalFooter, GlobalHeader, GlobalSider, GlobalContent } from '../commons';
 import { useAppStore } from '@/store';
 import { computed } from 'vue';
 
