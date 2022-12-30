@@ -1,16 +1,16 @@
 <template>
-    <el-popover class="!p-0" trigger="click" placement="bottom">
-        <template #trigger>
+    <el-popover trigger="click" :width="384" placement="bottom-end">
+        <template #reference>
             <hover-container tooltip-content="消息通知" class="relative w-40px h-full">
-                <icon-clarity-notification-line class="text-18px" />
-                <el-badge :value="count" :max="99" :class="[count < 10 ? '-right-2px' : '-right-10px']"
-                    class="absolute top-10px" />
+                <el-badge :value="count" :max="99">
+                    <icon-clarity-notification-line class="text-18px" />
+                </el-badge>
             </hover-container>
         </template>
-        <el-tabs v-model:value="currentTab" class="w-[360px]" justify-content="space-evenly">
-            <el-tab-pane v-for="(item, index) in tabData" :key="item.key" :name="index">
-                <template #tab>
-                    <div class="flex-x-center items-center w-[120px]">
+        <el-tabs v-model="currentTab" class="w-[360px] !p-0">
+            <el-tab-pane v-for="(item, index) in tabData" :label="item.key" :name="index" :stretch="true">
+                <template #label>
+                    <div class="flex-x-center items-center w-[84px]">
                         <span class="mr-5px">{{ item.name }}</span>
                         <el-badge v-bind="item.badgeProps" :value="item.list.filter(message => !message.isRead).length"
                             :max="99" show-zero />
@@ -186,5 +186,7 @@ function handleLoadMore() {
 }
 </script>
 <style scoped>
-
+:deep(.el-popover) {
+    width: 360px;
+}
 </style>
