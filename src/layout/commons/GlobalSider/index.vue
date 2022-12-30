@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { VerticalSider } from './components';
+import VerticalSider  from './components/index.vue';
 </script>
 <style scoped>
 .global-sider {

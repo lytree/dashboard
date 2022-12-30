@@ -1,9 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+
 import { setupAssets } from './plugin';
 import { setupRouter } from './router'
 import { setupStore } from './store'
-import AppLoading from './components/apploading/index.vue'
+import AppLoading from './components/AppLoading/index.vue'
 async function setupApp() {
     // import assets: js、css
     setupAssets();

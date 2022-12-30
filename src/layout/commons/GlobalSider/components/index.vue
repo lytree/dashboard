@@ -1,18 +1,20 @@
 <template>
-  <dark-mode-container class="flex-col-stretch h-full" :inverted="theme.sider.inverted">
-    <global-logo :show-title="showTitle" :style="{ height: theme.header.height + 'px' }" />
+  <dark-mode-container class="flex-col-stretch h-full" >
+    <global-logo :show-title="showTitle" :style="{ height:  '56px' }" />
     <vertical-menu />
   </dark-mode-container>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { useAppStore, useThemeStore } from '@/store';
-import { GlobalLogo } from '@/layouts/common';
-import { VerticalMenu } from './VerticalSider/components';
+import { useAppStore } from '@/store';
+import { GlobalLogo } from '../../index';
+import { DarkModeContainer } from '@/components'
+import VerticalMenu from './VerticalMenu.vue';
 
 const app = useAppStore();
-const theme = useThemeStore();
 const showTitle = computed(() => !app.siderCollapse);
 </script>
-<style scoped></style>
+<style scoped>
+
+</style>
