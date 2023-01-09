@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@better-scroll/core': ^2.5.0
-  '@iconify/json': ^2.2.3
+  '@iconify/json': ^2.2.4
   '@iconify/vue': ^4.0.2
   '@types/node': ^18.11.18
   '@types/qs': ^6.9.7
@@ -56,7 +56,7 @@ dependencies:
   vue-router: 4.1.6_vue@3.2.45
 
 devDependencies:
-  '@iconify/json': 2.2.3
+  '@iconify/json': 2.2.4
   '@iconify/vue': 4.0.2_vue@3.2.45
   '@types/node': 18.11.18
   '@types/qs': 6.9.7
@@ -669,8 +669,8 @@ packages:
       '@floating-ui/core': 1.1.0
     dev: false
 
-  /@iconify/json/2.2.3:
-    resolution: {integrity: sha512-9o15HUqjUg/4VaT5webZAf0mJftToRkyzI2AI1AVjV+hffrJxkUx6Cbj8psHaMIfy4d369bnxksVBFwKKwOlAw==}
+  /@iconify/json/2.2.4:
+    resolution: {integrity: sha512-QjJJD7tsggk0hWWDr8z5mBND52kI63NLNhubYAPZzGLMjDQ5rJ1HOBHoJ1P2O6450CYuYp7tfc4W0zJ9/QfUiA==}
     dependencies:
       '@iconify/types': 2.0.0
       pathe: 1.0.0
@@ -2279,7 +2279,7 @@ packages:
     resolution: {integrity: sha512-6slSBEV1lMKcX13DBifvnDFpNno5WXhw4j/ff7RI0y51BZiDqEe5dNhhjhIQ3iCOQuzsm2MbVzmwqbN78BBhPg==}
     hasBin: true
     dependencies:
-      tsx: 3.12.1
+      tsx: 3.12.2
     dev: true
 
   /estree-walker/1.0.1:
@@ -4306,8 +4306,8 @@ packages:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
     dev: true
 
-  /tsx/3.12.1:
-    resolution: {integrity: sha512-Rcg1x+rNe7qwlP8j7kx4VjP/pJo/V57k+17hlrn6a7FuQLNwkaw5W4JF75tYornNVCxkXdSUnqlIT8JY/ttvIw==}
+  /tsx/3.12.2:
+    resolution: {integrity: sha512-ykAEkoBg30RXxeOMVeZwar+JH632dZn9EUJVyJwhfag62k6UO/dIyJEV58YuLF6e5BTdV/qmbQrpkWqjq9cUnQ==}
     hasBin: true
     dependencies:
       '@esbuild-kit/cjs-loader': 2.4.1
